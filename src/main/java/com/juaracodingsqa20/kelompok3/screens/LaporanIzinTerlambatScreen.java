@@ -2,8 +2,6 @@ package com.juaracodingsqa20.kelompok3.screens;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,15 +23,15 @@ public class LaporanIzinTerlambatScreen {
     private final By FIRST_DEPARTMENT_INPUT_CHOICE = By.xpath("//*[@id=\"job_departement-option-0\"]");
     private final By FILTER_SAVE_BUTTON = By.xpath("/html/body/div[3]/div[3]/div/form/div[2]/button[2]");
     private final By FILTER_DATE_BUTTON = By.xpath(
-            "/html/body/div[1]/div/div/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[2]/div[1]/div/div/button");
+            "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-kw2xn2']//div[1]//div[1]//div[1]//button[1]");
     private final By FILTER_START_YEAR_SELECT = By.xpath(
-            "/html/body/div[1]/div/div/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[3]/select");
+            "//span[@class='rdrYearPicker']//select");
     private final By FILTER_START_MONTH_SELECT = By.xpath(
-            "/html/body/div[1]/div/div/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[1]/select");
+            "//span[@class='rdrMonthPicker']//select");
     private final By FILTER_END_YEAR_SELECT = By.xpath(
-            "/html/body/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[3]/select");
+            "//span[@class='rdrYearPicker']//select");
     private final By FILTER_END_MONTH_SELECT = By.xpath(
-            "/html/body/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[1]/select");
+            "//span[@class='rdrYearPicker']//select");
 
     public LaporanIzinTerlambatScreen(WebDriver driver) {
         this.DRIVER = driver;
@@ -124,13 +122,13 @@ public class LaporanIzinTerlambatScreen {
         SleepHelper.Sleep();
         By filterStartMonthSelectOption = By.xpath(
                 "/html/body/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[1]/select/option[@value='"
-                        + (Integer.parseInt(startDateArray[0]) - 1) + "']");
+                        + (Integer.parseInt(startDateArray[1]) - 1) + "']");
         WebElement filterStartMonthOptionElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(filterStartMonthSelectOption));
         filterStartMonthOptionElement.click();
         SleepHelper.Sleep();
         By filterStartDay = By.xpath(
-                "//button/span/span[contains(.,'"
+                "//button/span/span[contains(text(),'"
                         + Integer.parseInt(startDateArray[0]) + "')]");
         WebElement filterStartDayElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(filterStartDay));
@@ -139,10 +137,6 @@ public class LaporanIzinTerlambatScreen {
 
     public void inputFilterEndDate(String endDate) {
         String[] endDateArray = endDate.split("/");
-        SleepHelper.Sleep();
-        WebElement filterEndDateButtonElement = DriverWaitHelper.DRIVER_WAIT
-                .until(ExpectedConditions.elementToBeClickable(FILTER_DATE_BUTTON));
-        filterEndDateButtonElement.click();
         SleepHelper.Sleep();
         WebElement filterEndYearSelectElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(FILTER_END_YEAR_SELECT));
@@ -160,15 +154,15 @@ public class LaporanIzinTerlambatScreen {
         filterEndMonthSelectElement.click();
         SleepHelper.Sleep();
         By filterEndMonthSelectOption = By.xpath(
-                "/html/body/div[1]/div/div/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[1]/select/option[@value='"
-                        + (Integer.parseInt(endDateArray[0]) - 1) + "']");
+                "/html/body/div[1]/div/div[2]/div/div[1]/div/div[1]/div/div[2]/form/div/div[1]/div[3]/div/div/div[1]/div[2]/span/span[1]/select/option[@value='"
+                        + (Integer.parseInt(endDateArray[1]) - 1) + "']");
         WebElement filterEndMonthOptionElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(filterEndMonthSelectOption));
         filterEndMonthOptionElement.click();
         SleepHelper.Sleep();
         By filterEndDay = By.xpath(
-                "//button/span/span[contains(.,'"
-                        + Integer.parseInt(endDateArray[0]) + "')]");
+                "(//button/span/span[contains(text(),'"
+                        + Integer.parseInt(endDateArray[0]) + "')])[2]");
         WebElement filterEndDayElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(filterEndDay));
         filterEndDayElement.click();
@@ -185,8 +179,8 @@ public class LaporanIzinTerlambatScreen {
                     .until(ExpectedConditions.elementToBeClickable(dateDataFromTable));
             sdf = new SimpleDateFormat("dd MMM yyyy", new Locale("id", "ID"));
             Date dateDataFromTableParsed = sdf.parse(dateDataFromTableElement.getText());
-            boolean isValid = expectedStartDateParsed.after(dateDataFromTableParsed)
-                    || expectedStartDateParsed.equals(expectedStartDateParsed);
+            boolean isValid = expectedStartDateParsed.before(dateDataFromTableParsed)
+                    || expectedStartDateParsed.equals(dateDataFromTableParsed);
             if (!isValid) {
                 return false;
             }
@@ -205,8 +199,8 @@ public class LaporanIzinTerlambatScreen {
                     .until(ExpectedConditions.elementToBeClickable(dateDataFromTable));
             sdf = new SimpleDateFormat("dd MMM yyyy", new Locale("id", "ID"));
             Date dateDataFromTableParsed = sdf.parse(dateDataFromTableElement.getText());
-            boolean isValid = expectedEndDateParsed.before(dateDataFromTableParsed)
-                    || expectedEndDateParsed.equals(expectedEndDateParsed);
+            boolean isValid = expectedEndDateParsed.after(dateDataFromTableParsed)
+                    || expectedEndDateParsed.equals(dateDataFromTableParsed);
             if (!isValid) {
                 return false;
             }

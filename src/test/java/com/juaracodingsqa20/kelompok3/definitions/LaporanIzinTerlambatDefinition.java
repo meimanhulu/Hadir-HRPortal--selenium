@@ -1,5 +1,7 @@
 package com.juaracodingsqa20.kelompok3.definitions;
 
+import java.text.ParseException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -56,7 +58,8 @@ public class LaporanIzinTerlambatDefinition {
 
     @Given("Tanggal Mulai {string}")
     public void setInputFilterStartDate(String startDate) {
-        laporanIzinTerlambatScreen.inputFilterStartDate(startDate);;
+        laporanIzinTerlambatScreen.inputFilterStartDate(startDate);
+        ;
     }
 
     @And("Tanggal Selesai {string}")
@@ -70,12 +73,12 @@ public class LaporanIzinTerlambatDefinition {
     }
 
     @Then("Aplikasi Menampilkan Laporan Izin Terlambat dari Tanggal {string}")
-    public void verifyStartDateFilterResult(String expectedStartDate) {
-        Assert.assertTrue(laporanIzinTerlambatScreen.verifyDepartmentFilterResult(expectedStartDate));
+    public void verifyStartDateFilterResult(String expectedStartDate) throws ParseException {
+        Assert.assertTrue(laporanIzinTerlambatScreen.verifyStartDateFilterResult(expectedStartDate));
     }
-    
+
     @And("Sampai Tanggal {string}")
-    public void verifyEndDateFilterResult(String expectedEndDate) {
-        
+    public void verifyEndDateFilterResult(String expectedEndDate) throws ParseException {
+        Assert.assertTrue(laporanIzinTerlambatScreen.verifyEndDateFilterResult(expectedEndDate));
     }
 }
