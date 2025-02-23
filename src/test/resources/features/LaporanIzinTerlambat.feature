@@ -30,3 +30,11 @@ Feature: Laporan Izin Terlambat
         And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Departemen "IT Programmer"
         And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Mulai "19/11/2024"
         And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Selesai Sampai "23/11/2024"
+
+    Scenario: Menampilkan 25 Laporan Izin Terlambat
+        When Saya Mengubah Jumlah Tampilan Tabel Laporan Izin Terlambat Menjadi 25
+        Then Aplikasi Menampilkan 25 Laporan Izin Terlambat Teratas
+
+    Scenario: Menampilkan Laporan Izin Terlambat Halaman Selanjutnya
+        When Saya Berpindah Ke Laporan Izin Terlambat Halaman Selanjutnya
+        Then Aplikasi Menampilkan Laporan Izin Terlambat Halaman Kedua
