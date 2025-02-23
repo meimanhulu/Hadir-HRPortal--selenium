@@ -59,7 +59,6 @@ public class LaporanIzinTerlambatScreen {
         }
 
         public boolean verifySearchResult(String expectedName) {
-                SleepHelper.Sleep();
                 for (int i = 0; i < getNumberOfTableRows(); i++) {
                         By nameDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[2]/h6[1]");
                         WebElement nameDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
@@ -92,7 +91,6 @@ public class LaporanIzinTerlambatScreen {
         }
 
         public boolean verifyDepartmentFilterResult(String expectedDepartment) {
-                SleepHelper.Sleep();
                 for (int i = 0; i < getNumberOfTableRows(); i++) {
                         By departmentDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[4]/h6[1]");
                         WebElement departmentDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
@@ -107,7 +105,6 @@ public class LaporanIzinTerlambatScreen {
 
         public void inputFilterStartDate(String startDate) {
                 String[] startDateArray = startDate.split("/");
-                SleepHelper.Sleep();
                 WebElement filterStartDateButtonElement = DriverWaitHelper.DRIVER_WAIT
                                 .until(ExpectedConditions.elementToBeClickable(FILTER_DATE_BUTTON));
                 filterStartDateButtonElement.click();
@@ -144,7 +141,6 @@ public class LaporanIzinTerlambatScreen {
 
         public void inputFilterEndDate(String endDate) {
                 String[] endDateArray = endDate.split("/");
-                SleepHelper.Sleep();
                 WebElement filterEndYearSelectElement = DriverWaitHelper.DRIVER_WAIT
                                 .until(ExpectedConditions.elementToBeClickable(FILTER_END_YEAR_SELECT));
                 filterEndYearSelectElement.click();
@@ -178,7 +174,6 @@ public class LaporanIzinTerlambatScreen {
         public boolean verifyStartDateFilterResult(String expectedStartDate) throws ParseException {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 Date expectedStartDateParsed = sdf.parse(expectedStartDate);
-                SleepHelper.Sleep();
                 for (int i = 0; i < getNumberOfTableRows(); i++) {
                         By dateDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[5]/h6[1]");
                         WebElement dateDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
@@ -197,7 +192,6 @@ public class LaporanIzinTerlambatScreen {
         public boolean verifyEndDateFilterResult(String expectedEndDate) throws ParseException {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 Date expectedEndDateParsed = sdf.parse(expectedEndDate);
-                SleepHelper.Sleep();
                 for (int i = 0; i < getNumberOfTableRows(); i++) {
                         By dateDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[5]/h6[1]");
                         WebElement dateDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
