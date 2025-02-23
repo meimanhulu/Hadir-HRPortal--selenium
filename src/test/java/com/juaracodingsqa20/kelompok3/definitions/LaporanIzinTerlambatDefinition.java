@@ -10,7 +10,6 @@ import com.juaracodingsqa20.kelompok3.drivers.utils.UrlHelper;
 import com.juaracodingsqa20.kelompok3.screens.LaporanIzinTerlambatScreen;
 
 import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -62,7 +61,7 @@ public class LaporanIzinTerlambatDefinition {
         ;
     }
 
-    @And("Tanggal Selesai {string}")
+    @Given("Tanggal Selesai {string}")
     public void setInputFilterEndDate(String endDate) {
         laporanIzinTerlambatScreen.inputFilterEndDate(endDate);
     }
@@ -77,8 +76,33 @@ public class LaporanIzinTerlambatDefinition {
         Assert.assertTrue(laporanIzinTerlambatScreen.verifyStartDateFilterResult(expectedStartDate));
     }
 
-    @And("Sampai Tanggal {string}")
+    @Then("Aplikasi Menampilkan Laporan Izin Terlambat Sampai Tanggal {string}")
     public void verifyEndDateFilterResult(String expectedEndDate) throws ParseException {
         Assert.assertTrue(laporanIzinTerlambatScreen.verifyEndDateFilterResult(expectedEndDate));
+    }
+
+    @When("Saya Menekan Tombol Reset")
+    public void executeResetButton() {
+        laporanIzinTerlambatScreen.pressFilterResetButton();
+    }
+
+    @Then("Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Nama {string}")
+    public void verifyResetSearchResult(String unexpectedName) {
+        Assert.assertFalse(laporanIzinTerlambatScreen.verifySearchResult(unexpectedName));
+    }
+
+    @Then("Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Departemen {string}")
+    public void verifyResetDepartmentResult(String unexpectedDepartment) {
+        Assert.assertFalse(laporanIzinTerlambatScreen.verifyDepartmentFilterResult(unexpectedDepartment));
+    }
+
+    @Then("Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Mulai {string}")
+    public void verifyResetStartDateFilterResult(String unexpectedStartDate) throws ParseException {
+        Assert.assertFalse(laporanIzinTerlambatScreen.verifyStartDateFilterResult(unexpectedStartDate));
+    }
+
+    @Then("Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Selesai Sampai {string}")
+    public void verifyResetEndDateFilterResult(String unexpectedEndDate) throws ParseException {
+        Assert.assertFalse(laporanIzinTerlambatScreen.verifyEndDateFilterResult(unexpectedEndDate));
     }
 }
