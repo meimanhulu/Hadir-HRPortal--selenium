@@ -48,7 +48,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 23, 2025 09:31:56 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 24, 2025 12:18:21 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -126,7 +126,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>4</span> scenarios passed</span>
+                    <span class='strong'>6</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -146,7 +146,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>23</span> steps passed</span>
+                    <span class='strong'>27</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -176,7 +176,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Laporan Izin Terlambat</span>
-						<span class='test-time'>Feb 23, 2025 09:31:57 PM</span>
+						<span class='test-time'>Feb 24, 2025 12:18:22 AM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -189,7 +189,7 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 02.231</span>
+	<span class='duration right label'>00 00 05.469</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Mencari Laporan Izin Terlambat Berdasarkan Nama Karyawan "Kazama"</div>
 	</div>
@@ -216,7 +216,7 @@
 </div>
 <div class='scenario node' test-id='7' status='pass'>
 
-	<span class='duration right label'>00 00 03.142</span>
+	<span class='duration right label'>00 00 06.097</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Departemen "APP Luar Kota"</div>
 	</div>
@@ -243,7 +243,7 @@
 </div>
 <div class='scenario node' test-id='12' status='pass'>
 
-	<span class='duration right label'>00 00 09.347</span>
+	<span class='duration right label'>00 00 15.457</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat dari Tanggal 10/08/2024 sampai 01/01/2025</div>
 	</div>
@@ -280,7 +280,7 @@
 </div>
 <div class='scenario node' test-id='19' status='pass'>
 
-	<span class='duration right label'>00 00 12.256</span>
+	<span class='duration right label'>00 00 24.535</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menghilangkan Parameter-parameter Filter Laporan Izin Terlambat yang Dibuat</div>
 	</div>
@@ -350,6 +350,50 @@
 		</li>
 	</ul>
 </div>
+<div class='scenario node' test-id='33' status='pass'>
+
+	<span class='duration right label'>00 00 04.127</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan 25 Laporan Izin Terlambat</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='35' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.changeRowsPerPage(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Saya Mengubah Jumlah Tampilan Tabel Laporan Izin Terlambat Menjadi 25</div>
+
+
+		</li>
+		<li test-id='36' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyRowsPerPage(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Aplikasi Menampilkan 25 Laporan Izin Terlambat Teratas</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='37' status='pass'>
+
+	<span class='duration right label'>00 00 04.071</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Halaman Selanjutnya</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='39' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToNextPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Saya Berpindah Ke Laporan Izin Terlambat Halaman Selanjutnya</div>
+
+
+		</li>
+		<li test-id='40' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyCurrentPageNumberIsSecondPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Aplikasi Menampilkan Laporan Izin Terlambat Halaman Kedua</div>
+
+
+		</li>
+	</ul>
+</div>
 					</div>
 				</li>
 			</ul>
@@ -388,31 +432,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>23</div>
+					<div class='panel-lead'>27</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 23, 2025 09:31:56 PM</div>
+					<div class='panel-lead'>Feb 24, 2025 12:18:21 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 23, 2025 09:32:25 PM</div>
+			 		<div class='panel-lead'>Feb 24, 2025 12:19:22 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 28.470</div>
+					<div class='panel-lead'>00 01 01.047</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -450,16 +494,16 @@
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 4,
-				passChild: 4,
+				childCount: 6,
+				passChild: 6,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 23,
-				passGrandChild: 23,
+				grandChildCount: 27,
+				passGrandChild: 27,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -471,7 +515,7 @@
 		
 		<script>
 			var timeline = {
-			        "Laporan Izin Terlambat":27.062
+			        "Laporan Izin Terlambat":59.873
 			};
 		</script>
 		
