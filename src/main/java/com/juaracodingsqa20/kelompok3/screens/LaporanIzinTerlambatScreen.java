@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import com.juaracodingsqa20.kelompok3.drivers.utils.SleepHelper;
 import com.juaracodingsqa20.kelompok3.drivers.utils.DriverWaitHelper;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class LaporanIzinTerlambatScreen {
@@ -32,6 +33,7 @@ public class LaporanIzinTerlambatScreen {
             "//span[@class='rdrYearPicker']//select");
     private final By FILTER_END_MONTH_SELECT = By.xpath(
             "//span[@class='rdrYearPicker']//select");
+    private final By FILTER_RESET_BUTTON = By.xpath("//button[normalize-space()='Reset']");
 
     public LaporanIzinTerlambatScreen(WebDriver driver) {
         this.DRIVER = driver;
@@ -128,8 +130,8 @@ public class LaporanIzinTerlambatScreen {
         filterStartMonthOptionElement.click();
         SleepHelper.Sleep();
         By filterStartDay = By.xpath(
-                "//button/span/span[contains(text(),'"
-                        + Integer.parseInt(startDateArray[0]) + "')]");
+                "//div[@class='rdrDays']/button/span/span[text()='"
+                        + Integer.parseInt(startDateArray[0]) + "']");
         WebElement filterStartDayElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(filterStartDay));
         filterStartDayElement.click();
@@ -161,8 +163,8 @@ public class LaporanIzinTerlambatScreen {
         filterEndMonthOptionElement.click();
         SleepHelper.Sleep();
         By filterEndDay = By.xpath(
-                "(//button/span/span[contains(text(),'"
-                        + Integer.parseInt(endDateArray[0]) + "')])[2]");
+                "//div[@class='rdrDays']/button/span/span[text()='"
+                        + Integer.parseInt(endDateArray[0]) + "']");
         WebElement filterEndDayElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(filterEndDay));
         filterEndDayElement.click();
@@ -206,5 +208,11 @@ public class LaporanIzinTerlambatScreen {
             }
         }
         return true;
+    }
+
+    public void pressFilterResetButton() {
+        WebElement filterResetButtonElement = DriverWaitHelper.DRIVER_WAIT
+                .until(ExpectedConditions.elementToBeClickable(FILTER_RESET_BUTTON));
+        filterResetButtonElement.click();
     }
 }
