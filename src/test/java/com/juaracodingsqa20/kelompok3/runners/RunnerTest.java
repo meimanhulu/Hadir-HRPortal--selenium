@@ -6,7 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {
                 // "src/test/resources/features/Persegi.feature", contohnya seperti ini
-                "src/test/resources/features/LaporanIzinTerlambat.feature"
+                "src/test/resources/features/LaporanIzinTerlambat.feature",
+                "src/test/resources/features/LaporanIzinPulangCepat.feature"
         },
         glue = {
                 "com.juaracodingsqa20.kelompok3.definitions",

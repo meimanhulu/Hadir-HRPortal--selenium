@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 24, 2025 12:18:21 AM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 24, 2025 08:24:21 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Laporan Izin Terlambat</p>
+            <p class="name">Laporan Izin Pulang Cepat</p>
             <p class="text-sm">
-              <span>00.18.22</span> / <span>00:00:59:873</span>
+              <span>20.24.22</span> / <span>00:01:53:061</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Laporan Izin Terlambat</h5>
-<span class='badge badge-success'>02.24.2025 00.18.22</span>
-<span class='badge badge-danger'>02.24.2025 00.19.22</span>
-<span class='badge badge-default'>00:00:59:873</span>
+<h5 class="test-status text-pass">Laporan Izin Pulang Cepat</h5>
+<span class='badge badge-success'>02.24.2025 20.24.22</span>
+<span class='badge badge-danger'>02.24.2025 20.26.15</span>
+<span class='badge badge-default'>00:01:53:061</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,22 +105,348 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Mencari Laporan Izin Terlambat Berdasarkan Nama Karyawan "Kazama"</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Mencari Laporan Izin Pulang Cepat Berdasarkan Nama Karyawan "Kazama"</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputName(java.lang.String)">
-                <span>Given Nama Karyawan "Kazama"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputNameLaporanIzinPulangCepat(java.lang.String)">
+                <span>Given Nama Karyawan "Kazama" di Kolom Pencarian Laporan Izin Pulang Cepat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeSearch()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeSearchLaporanIzinPulangCepat()">
+                <span>When Saya Mencari Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifySearchResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Sesuai Nama "Kazama"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Pulang Cepat Departemen "APP Luar Kota"</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputDepartmentLaporanIzinPulangCepat(java.lang.String)">
+                <span>Given Departemen "APP Luar Kota" di Kolom Filter Departemen Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeDepartmentFilterLaporanIzinPulangCepat()">
+                <span>When Saya Memfilter Departemen Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyDepartmentFilterResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Sesuai Departemen "APP Luar Kota"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Pulang Cepat dari Tanggal 10/08/2024 sampai 01/01/2025</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputFilterStartDateLaporanIzinPulangCepat(java.lang.String)">
+                <span>Given Tanggal Mulai "10/08/2024" di Kolom Filter Tanggal Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputFilterEndDateLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Tanggal Selesai "01/01/2025" di Kolom Filter Tanggal Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeDateFilterLaporanIzinPulangCepat()">
+                <span>When Saya Memfilter Tanggal Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyStartDateFilterResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat dari Tanggal "10/08/2024"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyEndDateFilterResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Aplikasi Menampilkan Laporan Izin Pulang Cepat Sampai Tanggal "01/01/2025"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>Menghilangkan Parameter-parameter Filter Laporan Izin Pulang Cepat yang Dibuat</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputNameLaporanIzinPulangCepat(java.lang.String)">
+                <span>Given Nama Karyawan "Kazama" di Kolom Pencarian Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeSearchLaporanIzinPulangCepat()">
+                <span>And Saya Mencari Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputDepartmentLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeDepartmentFilterLaporanIzinPulangCepat()">
+                <span>And Saya Memfilter Departemen Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputFilterStartDateLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Tanggal Mulai "19/11/2024" di Kolom Filter Tanggal Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.setInputFilterEndDateLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Tanggal Selesai "23/11/2024" di Kolom Filter Tanggal Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeDateFilterLaporanIzinPulangCepat()">
+                <span>And Saya Memfilter Tanggal Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.executeResetButtonLaporanIzinPulangCepat()">
+                <span>When Saya Menekan Tombol Reset di Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyResetSearchResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Tidak Berdasarkan Nama "Kazama"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyResetDepartmentResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Aplikasi Menampilkan Laporan Izin Pulang Cepat Tidak Berdasarkan Departemen "IT Programmer"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyResetStartDateFilterResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Aplikasi Menampilkan Laporan Izin Pulang Cepat Tidak Berdasarkan Tanggal Mulai "19/11/2024"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyResetEndDateFilterResultLaporanIzinPulangCepat(java.lang.String)">
+                <span>And Aplikasi Menampilkan Laporan Izin Pulang Cepat Tidak Berdasarkan Tanggal Selesai Sampai "23/11/2024"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="37"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan 25 Laporan Izin Pulang Cepat</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.changeRowsPerPageLaporanIzinPulangCepat(int)">
+                <span>When Saya Mengubah Jumlah Tampilan Tabel Laporan Izin Pulang Cepat Menjadi 25</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyRowsPerPageLaporanIzinPulangCepat(int)">
+                <span>Then Aplikasi Menampilkan 25 Laporan Izin Pulang Cepat Teratas</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="42"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Pulang Cepat Halaman Selanjutnya</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.navigateToNextPageLaporanIzinPulangCepat()">
+                <span>When Saya Berpindah Ke Laporan Izin Pulang Cepat Halaman Selanjutnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyCurrentPageNumberIsSecondPageLaporanIzinPulangCepat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Halaman Kedua</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Pulang Cepat Halaman Sebelumnya</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.navigateToNextPageLaporanIzinPulangCepat()">
+                <span>When Saya Berpindah Ke Laporan Izin Pulang Cepat Halaman Selanjutnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.navigateToPreviousPageLaporanIzinPulangCepat()">
+                <span>And Saya Berpindah Ke Laporan Izin Pulang Cepat Halaman Sebelumnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyCurrentPageNumberIsFirstPageLaporanIzinPulangCepat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Halaman Pertama</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Pulang Cepat Halaman Terakhir</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.navigateToLastPageLaporanIzinPulangCepat()">
+                <span>When Saya Berpindah Ke Laporan Izin Pulang Cepat Halaman Terakhir</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyCurrentPageNumberIsLastPageLaporanIzinPulangCepat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Halaman Terakhir</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="58"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Pulang Cepat Halaman Pertama</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.navigateToNextPageLaporanIzinPulangCepat()">
+                <span>When Saya Berpindah Ke Laporan Izin Pulang Cepat Halaman Selanjutnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.navigateToFirstPageLaporanIzinPulangCepat()">
+                <span>And Saya Berpindah Ke Laporan Izin Pulang Cepat Halaman Pertama</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyCurrentPageNumberIsFirstPageLaporanIzinPulangCepat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Halaman Pertama</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="64"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Semua Laporan Izin Pulang Cepat Teratas</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.openLaporanIzinPulangCepatLaporanIzinPulangCepat()">
+                <span>When Saya Membuka Laporan Izin Pulang Cepat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinPulangCepatDefinition.verifyDataShowedLaporanIzinPulangCepat()">
+                <span>Then Aplikasi Menampilkan Semua Laporan Izin Pulang Cepat Teratas</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="69"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Laporan Izin Terlambat</p>
+            <p class="text-sm">
+              <span>20.26.15</span> / <span>00:01:46:145</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Laporan Izin Terlambat</h5>
+<span class='badge badge-success'>02.24.2025 20.26.15</span>
+<span class='badge badge-danger'>02.24.2025 20.28.01</span>
+<span class='badge badge-default'>00:01:46:145</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=69</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="70"><span class="badge log pass-bg mr-2">Pass</span>Mencari Laporan Izin Terlambat Berdasarkan Nama Karyawan "Kazama"</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputNameLaporanIzinTerlambat(java.lang.String)">
+                <span>Given Nama Karyawan "Kazama" di Kolom Pencarian Laporan Izin Terlambat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeSearchLaporanIzinTerlambat()">
                 <span>When Saya Mencari Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifySearchResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifySearchResultLaporanIzinTerlambat(java.lang.String)">
                 <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Sesuai Nama "Kazama"</span>
       <div>
       </div>
@@ -131,22 +457,22 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Departemen "APP Luar Kota"</div>
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Departemen "APP Luar Kota"</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartment(java.lang.String)">
-                <span>Given Departemen "APP Luar Kota"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartmentLaporanIzinTerlambat(java.lang.String)">
+                <span>Given Departemen "APP Luar Kota" di Kolom Filter Departemen Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDepartmentFilter()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDepartmentFilterLaporanIzinTerlambat()">
                 <span>When Saya Memfilter Departemen Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyDepartmentFilterResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyDepartmentFilterResultLaporanIzinTerlambat(java.lang.String)">
                 <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Sesuai Departemen "APP Luar Kota"</span>
       <div>
       </div>
@@ -157,32 +483,32 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat dari Tanggal 10/08/2024 sampai 01/01/2025</div>
+        <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat dari Tanggal 10/08/2024 sampai 01/01/2025</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterStartDate(java.lang.String)">
-                <span>Given Tanggal Mulai "10/08/2024"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterStartDateLaporanIzinTerlambat(java.lang.String)">
+                <span>Given Tanggal Mulai "10/08/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterEndDate(java.lang.String)">
-                <span>And Tanggal Selesai "01/01/2025"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterEndDateLaporanIzinTerlambat(java.lang.String)">
+                <span>And Tanggal Selesai "01/01/2025" di Kolom Filter Tanggal Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDateFilter()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDateFilterLaporanIzinTerlambat()">
                 <span>When Saya Memfilter Tanggal Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyStartDateFilterResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyStartDateFilterResultLaporanIzinTerlambat(java.lang.String)">
                 <span>Then Aplikasi Menampilkan Laporan Izin Terlambat dari Tanggal "10/08/2024"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyEndDateFilterResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyEndDateFilterResultLaporanIzinTerlambat(java.lang.String)">
                 <span>And Aplikasi Menampilkan Laporan Izin Terlambat Sampai Tanggal "01/01/2025"</span>
       <div>
       </div>
@@ -193,67 +519,67 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Menghilangkan Parameter-parameter Filter Laporan Izin Terlambat yang Dibuat</div>
+        <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>Menghilangkan Parameter-parameter Filter Laporan Izin Terlambat yang Dibuat</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputName(java.lang.String)">
-                <span>Given Nama Karyawan "Kazama"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputNameLaporanIzinTerlambat(java.lang.String)">
+                <span>Given Nama Karyawan "Kazama" di Kolom Pencarian Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeSearch()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeSearchLaporanIzinTerlambat()">
                 <span>And Saya Mencari Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartment(java.lang.String)">
-                <span>And Departemen "IT Programmer"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartmentLaporanIzinTerlambat(java.lang.String)">
+                <span>And Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDepartmentFilter()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDepartmentFilterLaporanIzinTerlambat()">
                 <span>And Saya Memfilter Departemen Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterStartDate(java.lang.String)">
-                <span>And Tanggal Mulai "19/11/2024"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterStartDateLaporanIzinTerlambat(java.lang.String)">
+                <span>And Tanggal Mulai "19/11/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterEndDate(java.lang.String)">
-                <span>And Tanggal Selesai "23/11/2024"</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterEndDateLaporanIzinTerlambat(java.lang.String)">
+                <span>And Tanggal Selesai "23/11/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDateFilter()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDateFilterLaporanIzinTerlambat()">
                 <span>And Saya Memfilter Tanggal Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeResetButton()">
-                <span>When Saya Menekan Tombol Reset</span>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeResetButtonLaporanIzinTerlambat()">
+                <span>When Saya Menekan Tombol Reset di Laporan Izin Terlambat</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetSearchResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetSearchResultLaporanIzinTerlambat(java.lang.String)">
                 <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Nama "Kazama"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetDepartmentResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetDepartmentResultLaporanIzinTerlambat(java.lang.String)">
                 <span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Departemen "IT Programmer"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetStartDateFilterResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetStartDateFilterResultLaporanIzinTerlambat(java.lang.String)">
                 <span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Mulai "19/11/2024"</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetEndDateFilterResult(java.lang.String)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetEndDateFilterResultLaporanIzinTerlambat(java.lang.String)">
                 <span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Selesai Sampai "23/11/2024"</span>
       <div>
       </div>
@@ -264,17 +590,17 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan 25 Laporan Izin Terlambat</div>
+        <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan 25 Laporan Izin Terlambat</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.changeRowsPerPage(int)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.changeRowsPerPageLaporanIzinTerlambat(int)">
                 <span>When Saya Mengubah Jumlah Tampilan Tabel Laporan Izin Terlambat Menjadi 25</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyRowsPerPage(int)">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyRowsPerPageLaporanIzinTerlambat(int)">
                 <span>Then Aplikasi Menampilkan 25 Laporan Izin Terlambat Teratas</span>
       <div>
       </div>
@@ -285,18 +611,112 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="37"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Halaman Selanjutnya</div>
+        <div class="node" id="110"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Halaman Selanjutnya</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToNextPage()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToNextPageLaporanIzinTerlambat()">
                 <span>When Saya Berpindah Ke Laporan Izin Terlambat Halaman Selanjutnya</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyCurrentPageNumberIsSecondPage()">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyCurrentPageNumberIsSecondPageLaporanIzinTerlambat()">
                 <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Halaman Kedua</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="115"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Halaman Sebelumnya</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToNextPageLaporanIzinTerlambat()">
+                <span>When Saya Berpindah Ke Laporan Izin Terlambat Halaman Selanjutnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToPreviousPageLaporanIzinTerlambat()">
+                <span>And Saya Berpindah Ke Laporan Izin Terlambat Halaman Sebelumnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyCurrentPageNumberIsFirstPageLaporanIzinTerlambat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Halaman Pertama</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="121"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Halaman Terakhir</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToLastPageLaporanIzinTerlambat()">
+                <span>When Saya Berpindah Ke Laporan Izin Terlambat Halaman Terakhir</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyCurrentPageNumberIsLastPageLaporanIzinTerlambat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Halaman Terakhir</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Laporan Izin Terlambat Halaman Pertama</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToNextPageLaporanIzinTerlambat()">
+                <span>When Saya Berpindah Ke Laporan Izin Terlambat Halaman Selanjutnya</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.navigateToFirstPageLaporanIzinTerlambat()">
+                <span>And Saya Berpindah Ke Laporan Izin Terlambat Halaman Pertama</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyCurrentPageNumberIsFirstPageLaporanIzinTerlambat()">
+                <span>Then Aplikasi Menampilkan Laporan Izin Terlambat Halaman Pertama</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="132"><span class="badge log pass-bg mr-2">Pass</span>Menampilkan Semua Laporan Izin Terlambat Teratas</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.openLaporanIzinTerlambatLaporanIzinTerlambat()">
+                <span>When Saya Membuka Laporan Izin Terlambat</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyDataShowedLaporanIzinTerlambat()">
+                <span>Then Aplikasi Menampilkan Semua Laporan Izin Terlambat Teratas</span>
       <div>
       </div>
               </div>
@@ -320,19 +740,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 24, 2025 12:18:21 AM</h3>
+<h3>Feb 24, 2025 08:24:21 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 24, 2025 12:19:22 AM</h3>
+<h3>Feb 24, 2025 08:28:01 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -355,7 +775,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>1</b> features passed
+<b>2</b> features passed
 </small>
 </div>
 <div>
@@ -377,7 +797,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>6</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>20</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -397,7 +817,7 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>27</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>74</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -416,7 +836,7 @@
 </div></div>
 <script>
 var timeline = {
-"Laporan Izin Terlambat":59.873
+"Laporan Izin Pulang Cepat":113.061,"Laporan Izin Terlambat":106.145
 };
 </script>
 <div class="row">
@@ -443,18 +863,18 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
+passParent: 2,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 6,
+passChild: 20,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 27,
+passGrandChild: 74,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
