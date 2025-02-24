@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class LaporanIzinTerlambatScreen {
+public class LaporanIzinPulangCepatScreen {
         private final By SEARCH_INPUT = By.xpath("//input[@id='search']");
         private final By SEARCH_BUTTON = By.xpath("//button[@type='submit']");
         private final By FILTER_BUTTON = By.xpath(
@@ -307,7 +307,7 @@ public class LaporanIzinTerlambatScreen {
         }
 
         public void open() {
-                UrlHelper.goToLaporanIzinTerlambatUrl();
+                UrlHelper.goToLaporanIzinPulangCepatUrl();
         }
 
         public boolean isDataShowed() {
