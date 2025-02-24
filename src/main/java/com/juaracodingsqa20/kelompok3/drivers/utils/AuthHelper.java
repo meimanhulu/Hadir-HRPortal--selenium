@@ -1,7 +1,5 @@
 package com.juaracodingsqa20.kelompok3.drivers.utils;
 
-import java.sql.Driver;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
