@@ -3,7 +3,6 @@
 <suite name="Pengujian Aplikasi Hadir">
     <test name="Report and Management Admin Test">
         <classes>
-            <class name="com.juaracodingsqa20.kelompok3.HookTest"></class>
             <class name="com.juaracodingsqa20.kelompok3.runners.RunnerTest"></class>
         </classes>
     </test>
