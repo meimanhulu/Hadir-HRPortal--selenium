@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Feb 25, 2025 12:35:55 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Feb 25, 2025 09:26:09 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -65,6 +66,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -119,12 +121,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>2</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$50%'>
+                    <span class='strong'>1</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -137,12 +139,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>20</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='95%'>
+                    <span class='strong'>19</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='5%'>
+                    1</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,14 +159,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>94</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='89%'>
+                    <span class='strong'>84</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='9%'>
+                    9</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -188,7 +190,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Laporan Izin Pulang Cepat</span>
-						<span class='test-time'>Feb 25, 2025 12:36:00 PM</span>
+						<span class='test-time'>Feb 25, 2025 09:26:17 PM</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -201,7 +203,7 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 07.388</span>
+	<span class='duration right label'>00 00 07.178</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Mencari Laporan Izin Pulang Cepat Berdasarkan Nama Karyawan "Agung Aji Nugraha"</div>
 	</div>
@@ -240,7 +242,7 @@
 </div>
 <div class='scenario node' test-id='8' status='pass'>
 
-	<span class='duration right label'>00 00 07.311</span>
+	<span class='duration right label'>00 00 07.554</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Pulang Cepat Departemen "Tiket.com"</div>
 	</div>
@@ -279,7 +281,7 @@
 </div>
 <div class='scenario node' test-id='14' status='pass'>
 
-	<span class='duration right label'>00 00 17.925</span>
+	<span class='duration right label'>00 00 16.699</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Pulang Cepat dari Tanggal 11/12/2024 sampai 25/02/2025</div>
 	</div>
@@ -328,7 +330,7 @@
 </div>
 <div class='scenario node' test-id='22' status='pass'>
 
-	<span class='duration right label'>00 00 29.257</span>
+	<span class='duration right label'>00 00 28.368</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menghilangkan Parameter-parameter Filter Laporan Izin Pulang Cepat yang Dibuat</div>
 	</div>
@@ -412,7 +414,7 @@
 </div>
 <div class='scenario node' test-id='37' status='pass'>
 
-	<span class='duration right label'>00 00 06.597</span>
+	<span class='duration right label'>00 00 06.187</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan 25 Laporan Izin Pulang Cepat</div>
 	</div>
@@ -446,7 +448,7 @@
 </div>
 <div class='scenario node' test-id='42' status='pass'>
 
-	<span class='duration right label'>00 00 06.159</span>
+	<span class='duration right label'>00 00 06.134</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Pulang Cepat Halaman Selanjutnya</div>
 	</div>
@@ -480,7 +482,7 @@
 </div>
 <div class='scenario node' test-id='47' status='pass'>
 
-	<span class='duration right label'>00 00 11.103</span>
+	<span class='duration right label'>00 00 11.088</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Pulang Cepat Halaman Sebelumnya</div>
 	</div>
@@ -519,7 +521,7 @@
 </div>
 <div class='scenario node' test-id='53' status='pass'>
 
-	<span class='duration right label'>00 00 05.974</span>
+	<span class='duration right label'>00 00 05.677</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Pulang Cepat Halaman Terakhir</div>
 	</div>
@@ -553,7 +555,7 @@
 </div>
 <div class='scenario node' test-id='58' status='pass'>
 
-	<span class='duration right label'>00 00 11.225</span>
+	<span class='duration right label'>00 00 10.657</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Pulang Cepat Halaman Pertama</div>
 	</div>
@@ -592,7 +594,7 @@
 </div>
 <div class='scenario node' test-id='64' status='pass'>
 
-	<span class='duration right label'>00 00 05.833</span>
+	<span class='duration right label'>00 00 05.634</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Semua Laporan Izin Pulang Cepat Teratas</div>
 	</div>
@@ -626,11 +628,11 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='69'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='69'>
 					<div class='test-heading'>
 						<span class='test-name'>Laporan Izin Terlambat</span>
-						<span class='test-time'>Feb 25, 2025 12:37:49 PM</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Feb 25, 2025 09:28:02 PM</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -642,7 +644,7 @@
 
 <div class='scenario node' test-id='70' status='pass'>
 
-	<span class='duration right label'>00 00 06.401</span>
+	<span class='duration right label'>00 00 05.733</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Mencari Laporan Izin Terlambat Berdasarkan Nama Karyawan "Kazama"</div>
 	</div>
@@ -681,7 +683,7 @@
 </div>
 <div class='scenario node' test-id='76' status='pass'>
 
-	<span class='duration right label'>00 00 07.386</span>
+	<span class='duration right label'>00 00 06.540</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Departemen "APP Luar Kota"</div>
 	</div>
@@ -720,7 +722,7 @@
 </div>
 <div class='scenario node' test-id='82' status='pass'>
 
-	<span class='duration right label'>00 00 17.834</span>
+	<span class='duration right label'>00 00 16.362</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat dari Tanggal 10/08/2024 sampai 01/01/2025</div>
 	</div>
@@ -767,11 +769,11 @@
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='90' status='pass'>
+<div class='scenario node' test-id='90' status='fail'>
 
-	<span class='duration right label'>00 00 29.207</span>
+	<span class='duration right label'>00 00 01.496</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menghilangkan Parameter-parameter Filter Laporan Izin Terlambat yang Dibuat</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Menghilangkan Parameter-parameter Filter Laporan Izin Terlambat yang Dibuat</div>
 	</div>
 	
 	
@@ -790,55 +792,92 @@
 
 
 		</li>
-		<li test-id='94' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartmentLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Terlambat</div>
+		<li test-id='94' class='node and Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartmentLaporanIzinTerlambat(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>And Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Terlambat</div>
 
 
+					<textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c5ebc60d04cbad022acd001a62c0af73, clickElement {id=f.D65801C9ABD85D7A8111B039C57C775F.d.9FE265E52F945868FD2B61CE5750A405.e.714}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64568}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\FERDIS~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64568/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (c5ebc60d04cbad022acd001a62c0af73)] -> xpath: //*[@id="job_departement-option-0"]]
+Session ID: c5ebc60d04cbad022acd001a62c0af73
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.juaracodingsqa20.kelompok3.screens.LaporanIzinTerlambatScreen.inputDepartment(LaporanIzinTerlambatScreen.java:81)
+	at com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartmentLaporanIzinTerlambat(LaporanIzinTerlambatDefinition.java:40)
+	at ?.Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Terlambat(file:///D:/JuaraCoding/TugasAkhir/SeleniumJava/hadir-selenium/src/test/resources/features/LaporanIzinTerlambat.feature:24)
+</textarea>
 		</li>
-		<li test-id='95' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDepartmentFilterLaporanIzinTerlambat())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Saya Memfilter Departemen Laporan Izin Terlambat</div>
+		<li test-id='95' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDepartmentFilterLaporanIzinTerlambat())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Saya Memfilter Departemen Laporan Izin Terlambat</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='96' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterStartDateLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Tanggal Mulai "19/11/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</div>
+		<li test-id='96' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterStartDateLaporanIzinTerlambat(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Tanggal Mulai "19/11/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='97' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterEndDateLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Tanggal Selesai "23/11/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</div>
+		<li test-id='97' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputFilterEndDateLaporanIzinTerlambat(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Tanggal Selesai "23/11/2024" di Kolom Filter Tanggal Laporan Izin Terlambat</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='98' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDateFilterLaporanIzinTerlambat())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Saya Memfilter Tanggal Laporan Izin Terlambat</div>
+		<li test-id='98' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeDateFilterLaporanIzinTerlambat())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Saya Memfilter Tanggal Laporan Izin Terlambat</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='99' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeResetButtonLaporanIzinTerlambat())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Saya Menekan Tombol Reset di Laporan Izin Terlambat</div>
+		<li test-id='99' class='node when Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.executeResetButtonLaporanIzinTerlambat())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>When Saya Menekan Tombol Reset di Laporan Izin Terlambat</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='100' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetSearchResultLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Nama "Kazama"</div>
+		<li test-id='100' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetSearchResultLaporanIzinTerlambat(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Nama "Kazama"</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='101' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetDepartmentResultLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Departemen "IT Programmer"</div>
+		<li test-id='101' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetDepartmentResultLaporanIzinTerlambat(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Departemen "IT Programmer"</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='102' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetStartDateFilterResultLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Mulai "19/11/2024"</div>
+		<li test-id='102' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetStartDateFilterResultLaporanIzinTerlambat(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Mulai "19/11/2024"</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='103' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetEndDateFilterResultLaporanIzinTerlambat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Selesai Sampai "23/11/2024"</div>
+		<li test-id='103' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.verifyResetEndDateFilterResultLaporanIzinTerlambat(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Selesai Sampai "23/11/2024"</div>
 
 
+					<div class="node-step">Step skipped</div>
 		</li>
 		<li test-id='104' class='node * Pass' status='Pass'>
 			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>com.juaracodingsqa20.kelompok3.definitions.Hooks.takeScreenshot(io.cucumber.java.Scenario)</div>
@@ -853,7 +892,7 @@
 </div>
 <div class='scenario node' test-id='105' status='pass'>
 
-	<span class='duration right label'>00 00 06.800</span>
+	<span class='duration right label'>00 00 06.197</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan 25 Laporan Izin Terlambat</div>
 	</div>
@@ -887,7 +926,7 @@
 </div>
 <div class='scenario node' test-id='110' status='pass'>
 
-	<span class='duration right label'>00 00 06.158</span>
+	<span class='duration right label'>00 00 05.672</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Halaman Selanjutnya</div>
 	</div>
@@ -921,7 +960,7 @@
 </div>
 <div class='scenario node' test-id='115' status='pass'>
 
-	<span class='duration right label'>00 00 11.049</span>
+	<span class='duration right label'>00 00 10.939</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Halaman Sebelumnya</div>
 	</div>
@@ -960,7 +999,7 @@
 </div>
 <div class='scenario node' test-id='121' status='pass'>
 
-	<span class='duration right label'>00 00 06.056</span>
+	<span class='duration right label'>00 00 05.577</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Halaman Terakhir</div>
 	</div>
@@ -994,7 +1033,7 @@
 </div>
 <div class='scenario node' test-id='126' status='pass'>
 
-	<span class='duration right label'>00 00 11.185</span>
+	<span class='duration right label'>00 00 10.709</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Laporan Izin Terlambat Halaman Pertama</div>
 	</div>
@@ -1033,7 +1072,7 @@
 </div>
 <div class='scenario node' test-id='132' status='pass'>
 
-	<span class='duration right label'>00 00 05.809</span>
+	<span class='duration right label'>00 00 05.602</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Menampilkan Semua Laporan Izin Terlambat Teratas</div>
 	</div>
@@ -1131,52 +1170,52 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 25, 2025 12:36:00 PM</td>
+										<td>Feb 25, 2025 09:26:17 PM</td>
 										<td class='linked' test-id='2'>Mencari Laporan Izin Pulang Cepat Berdasarkan Nama Karyawan "Agung Aji Nugraha"</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:36:07 PM</td>
+										<td>Feb 25, 2025 09:26:24 PM</td>
 										<td class='linked' test-id='8'>Menampilkan Laporan Izin Pulang Cepat Departemen "Tiket.com"</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:36:15 PM</td>
+										<td>Feb 25, 2025 09:26:31 PM</td>
 										<td class='linked' test-id='14'>Menampilkan Laporan Izin Pulang Cepat dari Tanggal 11/12/2024 sampai 25/02/2025</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:36:33 PM</td>
+										<td>Feb 25, 2025 09:26:48 PM</td>
 										<td class='linked' test-id='22'>Menghilangkan Parameter-parameter Filter Laporan Izin Pulang Cepat yang Dibuat</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:02 PM</td>
+										<td>Feb 25, 2025 09:27:17 PM</td>
 										<td class='linked' test-id='37'>Menampilkan 25 Laporan Izin Pulang Cepat</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:08 PM</td>
+										<td>Feb 25, 2025 09:27:23 PM</td>
 										<td class='linked' test-id='42'>Menampilkan Laporan Izin Pulang Cepat Halaman Selanjutnya</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:15 PM</td>
+										<td>Feb 25, 2025 09:27:29 PM</td>
 										<td class='linked' test-id='47'>Menampilkan Laporan Izin Pulang Cepat Halaman Sebelumnya</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:26 PM</td>
+										<td>Feb 25, 2025 09:27:40 PM</td>
 										<td class='linked' test-id='53'>Menampilkan Laporan Izin Pulang Cepat Halaman Terakhir</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:32 PM</td>
+										<td>Feb 25, 2025 09:27:46 PM</td>
 										<td class='linked' test-id='58'>Menampilkan Laporan Izin Pulang Cepat Halaman Pertama</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:43 PM</td>
+										<td>Feb 25, 2025 09:27:56 PM</td>
 										<td class='linked' test-id='64'>Menampilkan Semua Laporan Izin Pulang Cepat Teratas</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -1189,13 +1228,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@LaporanIzinTerlambat</span>
 						<span class='category-status right'>
-						<span class='label pass'>10</span>
+						<span class='label pass'>9</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 10</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 9</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -1209,52 +1249,52 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 25, 2025 12:37:49 PM</td>
+										<td>Feb 25, 2025 09:28:02 PM</td>
 										<td class='linked' test-id='70'>Mencari Laporan Izin Terlambat Berdasarkan Nama Karyawan "Kazama"</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:37:55 PM</td>
+										<td>Feb 25, 2025 09:28:08 PM</td>
 										<td class='linked' test-id='76'>Menampilkan Laporan Izin Terlambat Departemen "APP Luar Kota"</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:38:03 PM</td>
+										<td>Feb 25, 2025 09:28:14 PM</td>
 										<td class='linked' test-id='82'>Menampilkan Laporan Izin Terlambat dari Tanggal 10/08/2024 sampai 01/01/2025</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:38:20 PM</td>
+										<td>Feb 25, 2025 09:28:31 PM</td>
 										<td class='linked' test-id='90'>Menghilangkan Parameter-parameter Filter Laporan Izin Terlambat yang Dibuat</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:38:50 PM</td>
+										<td>Feb 25, 2025 09:28:32 PM</td>
 										<td class='linked' test-id='105'>Menampilkan 25 Laporan Izin Terlambat</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:38:56 PM</td>
+										<td>Feb 25, 2025 09:28:38 PM</td>
 										<td class='linked' test-id='110'>Menampilkan Laporan Izin Terlambat Halaman Selanjutnya</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:39:03 PM</td>
+										<td>Feb 25, 2025 09:28:44 PM</td>
 										<td class='linked' test-id='115'>Menampilkan Laporan Izin Terlambat Halaman Sebelumnya</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:39:14 PM</td>
+										<td>Feb 25, 2025 09:28:55 PM</td>
 										<td class='linked' test-id='121'>Menampilkan Laporan Izin Terlambat Halaman Terakhir</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:39:20 PM</td>
+										<td>Feb 25, 2025 09:29:01 PM</td>
 										<td class='linked' test-id='126'>Menampilkan Laporan Izin Terlambat Halaman Pertama</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Feb 25, 2025 12:39:31 PM</td>
+										<td>Feb 25, 2025 09:29:11 PM</td>
 										<td class='linked' test-id='132'>Menampilkan Semua Laporan Izin Terlambat Teratas</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
@@ -1272,7 +1312,89 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.StaleElementReferenceException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 25, 2025 09:28:31 PM</td>
+										<td class='linked' test-id='94'>And Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Terlambat</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=133.0.3065.82)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c5ebc60d04cbad022acd001a62c0af73, clickElement {id=f.D65801C9ABD85D7A8111B039C57C775F.d.9FE265E52F945868FD2B61CE5750A405.e.714}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 133.0.3065.82, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:64568}, msedge: {msedgedriverVersion: 133.0.3065.82 (e8aeaf3e0117..., userDataDir: C:\Users\FERDIS~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64568/devtoo..., se:cdpVersion: 133.0.3065.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (c5ebc60d04cbad022acd001a62c0af73)] -> xpath: //*[@id="job_departement-option-0"]]
+Session ID: c5ebc60d04cbad022acd001a62c0af73
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.juaracodingsqa20.kelompok3.screens.LaporanIzinTerlambatScreen.inputDepartment(LaporanIzinTerlambatScreen.java:81)
+	at com.juaracodingsqa20.kelompok3.definitions.LaporanIzinTerlambatDefinition.setInputDepartmentLaporanIzinTerlambat(LaporanIzinTerlambatDefinition.java:40)
+	at ?.Departemen "IT Programmer" di Kolom Filter Departemen Laporan Izin Terlambat(file:///D:/JuaraCoding/TugasAkhir/SeleniumJava/hadir-selenium/src/test/resources/features/LaporanIzinTerlambat.feature:24)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -1298,19 +1420,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 25, 2025 12:35:55 PM</div>
+					<div class='panel-lead'>Feb 25, 2025 09:26:09 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 25, 2025 12:39:40 PM</div>
+			 		<div class='panel-lead'>Feb 25, 2025 09:29:20 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 03 44.965</div>
+					<div class='panel-lead'>00 03 10.663</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1356,11 +1478,11 @@
 						</tr>
 						<tr>
 							<td>@LaporanIzinTerlambat</td>
-							<td>10</td>
-							<td>0</td>
+							<td>9</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									90%
 							</td>
 						</tr>
 					</table>
@@ -1375,34 +1497,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 2,
-				passParent: 2,
-				failParent: 0,
+				passParent: 1,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 20,
-				passChild: 20,
-				failChild: 0,
+				passChild: 19,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 94,
-				passGrandChild: 94,
-				failGrandChild: 0,
+				passGrandChild: 84,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 9,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Laporan Izin Pulang Cepat":108.952,"Laporan Izin Terlambat":107.984
+			        "Laporan Izin Pulang Cepat":105.286,"Laporan Izin Terlambat":74.868
 			};
 		</script>
 		

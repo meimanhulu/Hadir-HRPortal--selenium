@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import com.juaracodingsqa20.kelompok3.drivers.DriverSingleton;
 import com.juaracodingsqa20.kelompok3.drivers.utils.AuthHelper;
 
@@ -18,7 +20,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = {
-                // "src/test/resources/features/Persegi.feature", contohnya seperti ini
+                // "src/test/resources/features/Persegi.feature", // contohnya seperti ini
                 "src/test/resources/features/LaporanIzinTerlambat.feature",
                 "src/test/resources/features/LaporanIzinPulangCepat.feature"
 }, glue = {
@@ -29,4 +31,6 @@ import io.cucumber.testng.CucumberOptions;
                 "json:target/cucumber-report.json",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 })
-public class RunnerTest extends AbstractTestNGCucumberTests {}
+public class RunnerTest extends AbstractTestNGCucumberTests {
+    
+}
