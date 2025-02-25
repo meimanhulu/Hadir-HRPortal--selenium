@@ -11,6 +11,10 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    
+    <maven.compiler.source default-value="23">${env.javaVersion}</maven.compiler.source>
+    <maven.compiler.target default-value="23">${env.javaVersion}</maven.compiler.target>
+    <!-- mvn clean test -DtestBrowser=edge -DjavaVersion=17 -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -23,7 +27,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.26.0</version>
+      <version>4.29.0</version>
     </dependency>
     <dependency>
       <groupId>org.testng</groupId>
