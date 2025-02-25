@@ -1,21 +1,11 @@
 package com.juaracodingsqa20.kelompok3.definitions;
 
-import java.io.File;
-import java.io.IOException;
 import java.text.ParseException;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
-import com.juaracodingsqa20.kelompok3.drivers.DriverSingleton;
 import com.juaracodingsqa20.kelompok3.drivers.utils.SleepHelper;
 import com.juaracodingsqa20.kelompok3.drivers.utils.UrlHelper;
 import com.juaracodingsqa20.kelompok3.screens.LaporanIzinTerlambatScreen;
-
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,7 +13,7 @@ import io.cucumber.java.en.When;
 public class LaporanIzinTerlambatDefinition {
     private LaporanIzinTerlambatScreen laporanIzinTerlambatScreen;
 
-    @Before
+    @Before("@LaporanIzinTerlambat")
     public void setup() {
         laporanIzinTerlambatScreen = new LaporanIzinTerlambatScreen();
         UrlHelper.goToLaporanIzinTerlambatUrl();

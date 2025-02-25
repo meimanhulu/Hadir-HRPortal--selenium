@@ -1,3 +1,4 @@
+@LaporanIzinPulangCepat
 Feature: Laporan Izin Pulang Cepat
 
   Scenario: Mencari Laporan Izin Pulang Cepat Berdasarkan Nama Karyawan "Kazama"
@@ -10,12 +11,12 @@ Feature: Laporan Izin Pulang Cepat
     When Saya Memfilter Departemen Laporan Izin Pulang Cepat
     Then Aplikasi Menampilkan Laporan Izin Pulang Cepat Sesuai Departemen "APP Luar Kota"
 
-  Scenario: Menampilkan Laporan Izin Pulang Cepat dari Tanggal 10/08/2024 sampai 01/01/2025
-    Given Tanggal Mulai "10/08/2024" di Kolom Filter Tanggal Laporan Izin Pulang Cepat
-    And Tanggal Selesai "01/01/2025" di Kolom Filter Tanggal Laporan Izin Pulang Cepat
+  Scenario: Menampilkan Laporan Izin Pulang Cepat dari Tanggal 11/12/2024 sampai 25/02/2025
+    Given Tanggal Mulai "11/12/2024" di Kolom Filter Tanggal Laporan Izin Pulang Cepat
+    And Tanggal Selesai "25/02/2025" di Kolom Filter Tanggal Laporan Izin Pulang Cepat
     When Saya Memfilter Tanggal Laporan Izin Pulang Cepat
-    Then Aplikasi Menampilkan Laporan Izin Pulang Cepat dari Tanggal "10/08/2024"
-    And Aplikasi Menampilkan Laporan Izin Pulang Cepat Sampai Tanggal "01/01/2025"
+    Then Aplikasi Menampilkan Laporan Izin Pulang Cepat dari Tanggal "11/12/2024"
+    And Aplikasi Menampilkan Laporan Izin Pulang Cepat Sampai Tanggal "25/02/2025"
 
   Scenario: Menghilangkan Parameter-parameter Filter Laporan Izin Pulang Cepat yang Dibuat
     Given Nama Karyawan "Kazama" di Kolom Pencarian Laporan Izin Pulang Cepat
