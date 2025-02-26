@@ -11,9 +11,15 @@ public class UrlHelper {
     private static final String ADMIN_LOGIN_URL = BASE_URL + "authentication/login";
     private static final String DASHBOARD_URL = BASE_URL + "dashboards/dashboard";
     private static final String LAPORAN_IZIN_PULANG_CEPAT_URL = BASE_URL + "laporan/izin-pulang-cepat";
+    private static final String LAPORAN_KEHADIRAN_URL = BASE_URL + "laporan/activity";
+    private static final String LAPORAN_CUTI_URL = BASE_URL + "laporan/cuti";
     
     public static void goToBaseUrl() {
         driver.get(BASE_URL);
+    }
+
+    public static void goToLaporanKehadiranUrl() {
+        driver.get(LAPORAN_KEHADIRAN_URL);
     }
 
     public static void goToLaporanIzinTerlambatUrl() {
@@ -30,5 +36,9 @@ public class UrlHelper {
 
     public static void goToLaporanIzinPulangCepatUrl() {
         driver.get(LAPORAN_IZIN_PULANG_CEPAT_URL);
+    }
+
+    public static void goToLaporanCutiUrl() {
+        driver.get(LAPORAN_CUTI_URL);
     }
 }
