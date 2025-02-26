@@ -131,9 +131,13 @@ public class LaporanIzinPulangCepatScreen {
                 By filterStartDay = By.xpath(
                                 "//div[@class='rdrDays']/button/span/span[text()='"
                                                 + Integer.parseInt(startDateArray[0]) + "']");
-                WebElement filterStartDayElement = DriverWaitHelper.DRIVER_WAIT
-                                .until(ExpectedConditions.elementToBeClickable(filterStartDay));
-                filterStartDayElement.click();
+                List<WebElement> filterStartDayElements = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(filterStartDay));
+                if (filterStartDayElements.size() > 1 && Integer.parseInt(startDateArray[0]) > 15) {
+                        filterStartDayElements.get(1).click();
+                } else {
+                        filterStartDayElements.get(0).click();
+                }
         }
 
         public void inputFilterEndDate(String endDate) {
@@ -163,9 +167,13 @@ public class LaporanIzinPulangCepatScreen {
                 By filterEndDay = By.xpath(
                                 "//div[@class='rdrDays']/button/span/span[text()='"
                                                 + Integer.parseInt(endDateArray[0]) + "']");
-                WebElement filterEndDayElement = DriverWaitHelper.DRIVER_WAIT
-                                .until(ExpectedConditions.elementToBeClickable(filterEndDay));
-                filterEndDayElement.click();
+                List<WebElement> filterEndDayElements = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(filterEndDay));
+                if (filterEndDayElements.size() > 1 && Integer.parseInt(endDateArray[0]) > 15) {
+                        filterEndDayElements.get(1).click();
+                } else {
+                        filterEndDayElements.get(0).click();
+                }
         }
 
         public boolean verifyStartDateFilterResult(String expectedStartDate) throws ParseException {
