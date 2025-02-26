@@ -9,7 +9,7 @@ public class ChromeDriverManager {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\chrome-win64\\chrome.exe");
         options.addArguments("--start-maximized");
-
+        
         return new ChromeDriver(options);
     }
 }
