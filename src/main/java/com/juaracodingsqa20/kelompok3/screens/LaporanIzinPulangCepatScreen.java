@@ -42,6 +42,9 @@ public class LaporanIzinPulangCepatScreen {
         private final By PREVIOUS_PAGE_BUTTON = By.xpath("//button[@title='Go to previous page']//*[name()='svg']");
         private final By LAST_PAGE_BUTTON = By.xpath("//button[@title='Go to last page']//*[name()='svg']");
         private final By FIRST_PAGE_BUTTON = By.xpath("//button[@title='Go to first page']//*[name()='svg']");
+        private final By START_DATE_INPUT = By.xpath("//input[@placeholder='Start Date']");
+        private final By END_DATE_INPUT = By.xpath("//input[@placeholder='End Date']");
+        private final By DATA_TABLE_TBODY = By.xpath("//tbody");
 
         public void inputName(String name) {
                 WebElement searchInputElement = DriverWaitHelper.DRIVER_WAIT
@@ -254,6 +257,12 @@ public class LaporanIzinPulangCepatScreen {
         }
 
         public int getNumberOfTableRows() {
+                WebElement dataTableTBodyElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions
+                                                .presenceOfElementLocated(DATA_TABLE_TBODY));
+                if (dataTableTBodyElement.getText().isEmpty()) {
+                        return 0;
+                }
                 List<WebElement> dataTableElements = DriverWaitHelper.DRIVER_WAIT
                                 .until(ExpectedConditions
                                                 .presenceOfAllElementsLocatedBy(DATA_TABLE));
@@ -320,5 +329,19 @@ public class LaporanIzinPulangCepatScreen {
 
         public boolean isDataShowed() {
                 return getNumberOfTableRows() > 0;
+        }
+
+        public boolean isStartDateFilled() {
+                WebElement startDateInputElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions
+                                                .elementToBeClickable(START_DATE_INPUT));
+                return !startDateInputElement.getDomAttribute("value").isEmpty();
+        }
+
+        public boolean isEndDateFilled() {
+                WebElement endDateInputElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions
+                                                .elementToBeClickable(END_DATE_INPUT));
+                return !endDateInputElement.getDomAttribute("value").isEmpty();
         }
 }

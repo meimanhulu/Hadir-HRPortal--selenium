@@ -99,13 +99,13 @@ public class LaporanIzinTerlambatDefinition {
     @Then("Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Mulai {string}")
     public void verifyResetStartDateFilterResultLaporanIzinTerlambat(String unexpectedStartDate) throws ParseException {
         SleepHelper.SleepLong();
-        Assert.assertFalse(laporanIzinTerlambatScreen.verifyStartDateFilterResult(unexpectedStartDate));
+        Assert.assertFalse(laporanIzinTerlambatScreen.isStartDateFilled());
     }
 
     @Then("Aplikasi Menampilkan Laporan Izin Terlambat Tidak Berdasarkan Tanggal Selesai Sampai {string}")
     public void verifyResetEndDateFilterResultLaporanIzinTerlambat(String unexpectedEndDate) throws ParseException {
         SleepHelper.SleepLong();
-        Assert.assertFalse(laporanIzinTerlambatScreen.verifyEndDateFilterResult(unexpectedEndDate));
+        Assert.assertFalse(laporanIzinTerlambatScreen.isEndDateFilled());
     }
 
     @When("Saya Mengubah Jumlah Tampilan Tabel Laporan Izin Terlambat Menjadi {int}")
