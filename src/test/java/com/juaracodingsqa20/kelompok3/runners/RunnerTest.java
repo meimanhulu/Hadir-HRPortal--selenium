@@ -19,11 +19,24 @@ import io.cucumber.java.Scenario;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = {
+
+@CucumberOptions(
+        features = {
+                // "src/test/resources/features/Persegi.feature", contohnya seperti ini
+                "src/test/resources/features/LaporanKehadiran.feature",
                 "src/test/resources/features/LaporanIzinTerlambat.feature",
                 "src/test/resources/features/LaporanIzinPulangCepat.feature",
+                "src/test/resources/features/LaporanCuti.feature",
                 "src/test/resources/features/LaporanSemua.feature"
+        },
+
+
+
+
+  
+                
 }, glue = {
+
                 "com.juaracodingsqa20.kelompok3.definitions",
 }, plugin = {
                 "pretty",
