@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 public class LaporanIzinTerlambatDefinition {
     private LaporanIzinTerlambatScreen laporanIzinTerlambatScreen;
 
-    @Before
+    @Before("@LaporanIzinTerlambat")
     public void setup() {
         laporanIzinTerlambatScreen = new LaporanIzinTerlambatScreen();
         UrlHelper.goToLaporanIzinTerlambatUrl();

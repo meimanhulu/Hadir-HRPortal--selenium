@@ -1,3 +1,4 @@
+@LaporanIzinTerlambat
 Feature: Laporan Izin Terlambat
 
   Scenario: Mencari Laporan Izin Terlambat Berdasarkan Nama Karyawan "Kazama"

@@ -19,7 +19,7 @@ public class LaporanIzinTerlambatScreen {
         private final By FILTER_BUTTON = By.xpath(
                         "//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1k0lhp1']//*[name()='svg']");
         private final By DEPARTMENT_INPUT_FIELD = By.xpath("//*[@id=\"job_departement\"]");
-        private final By FIRST_DEPARTMENT_INPUT_CHOICE = By.xpath("//*[@id=\"job_departement-option-0\"]");
+        private final By FIRST_DEPARTMENT_INPUT_OPTION = By.xpath("//*[@id=\"job_departement-option-0\"]");
         private final By FILTER_SAVE_BUTTON = By.xpath("/html/body/div[3]/div[3]/div/form/div[2]/button[2]");
         private final By FILTER_DATE_BUTTON = By.xpath(
                         "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-kw2xn2']//div[1]//div[1]//div[1]//button[1]");
@@ -76,9 +76,9 @@ public class LaporanIzinTerlambatScreen {
                 WebElement departementInputFieldElement = DriverWaitHelper.DRIVER_WAIT
                                 .until(ExpectedConditions.elementToBeClickable(DEPARTMENT_INPUT_FIELD));
                 departementInputFieldElement.sendKeys(department);
-                WebElement firstDepartementInputChoiceElement = DriverWaitHelper.DRIVER_WAIT
-                                .until(ExpectedConditions.elementToBeClickable(FIRST_DEPARTMENT_INPUT_CHOICE));
-                firstDepartementInputChoiceElement.click();
+                WebElement firstDepartementInputOptionElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.elementToBeClickable(FIRST_DEPARTMENT_INPUT_OPTION));
+                firstDepartementInputOptionElement.click();
         }
 
         public void pressFilterSaveButton() {
@@ -131,9 +131,13 @@ public class LaporanIzinTerlambatScreen {
                 By filterStartDay = By.xpath(
                                 "//div[@class='rdrDays']/button/span/span[text()='"
                                                 + Integer.parseInt(startDateArray[0]) + "']");
-                WebElement filterStartDayElement = DriverWaitHelper.DRIVER_WAIT
-                                .until(ExpectedConditions.elementToBeClickable(filterStartDay));
-                filterStartDayElement.click();
+                List<WebElement> filterStartDayElements = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(filterStartDay));
+                if (filterStartDayElements.size() > 1 && Integer.parseInt(startDateArray[0]) > 15) {
+                        filterStartDayElements.get(1).click();
+                } else {
+                        filterStartDayElements.get(0).click();
+                }
         }
 
         public void inputFilterEndDate(String endDate) {
@@ -163,9 +167,13 @@ public class LaporanIzinTerlambatScreen {
                 By filterEndDay = By.xpath(
                                 "//div[@class='rdrDays']/button/span/span[text()='"
                                                 + Integer.parseInt(endDateArray[0]) + "']");
-                WebElement filterEndDayElement = DriverWaitHelper.DRIVER_WAIT
-                                .until(ExpectedConditions.elementToBeClickable(filterEndDay));
-                filterEndDayElement.click();
+                List<WebElement> filterEndDayElements = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(filterEndDay));
+                if (filterEndDayElements.size() > 1 && Integer.parseInt(endDateArray[0]) > 15) {
+                        filterEndDayElements.get(1).click();
+                } else {
+                        filterEndDayElements.get(0).click();
+                }
         }
 
         public boolean verifyStartDateFilterResult(String expectedStartDate) throws ParseException {
