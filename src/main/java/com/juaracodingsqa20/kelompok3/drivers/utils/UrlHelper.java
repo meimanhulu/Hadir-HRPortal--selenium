@@ -18,6 +18,7 @@ public class UrlHelper {
     /// laporan Semua
     private static final String LAPORAN_ALL_URL = BASE_URL + "laporan/all";
     // Manajemen Aturan Cuti
+    
     private static final String MANAJEMEN_MANAGEMENT_UNIT_LEAVE_URL = BASE_URL + "management/unit-leave";
 
     public static void goToBaseUrl() {
@@ -50,5 +51,9 @@ public class UrlHelper {
 
     public static void goToLaporanAllUrl() {
         driver.get(LAPORAN_ALL_URL);
+    }
+
+    public static void goToManajemenManagementUnitLeaveUrl() {
+        driver.get(MANAJEMEN_MANAGEMENT_UNIT_LEAVE_URL);
     }
 }
