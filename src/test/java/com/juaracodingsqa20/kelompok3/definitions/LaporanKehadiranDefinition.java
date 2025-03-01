@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 public class LaporanKehadiranDefinition {
     private LaporanKehadiranScreen laporanKehadiranScreen;
 
-    @Before
+    @Before("@LaporanKehadiran")
     public void setup() {
         laporanKehadiranScreen = new LaporanKehadiranScreen();
         UrlHelper.goToLaporanKehadiranUrl();
