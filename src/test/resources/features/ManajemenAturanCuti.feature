@@ -1,3 +1,4 @@
+@ManagementAturanCuti
 Feature: Manajemen Aturan Cuti
 
   Scenario: Menambahkan data cuti baru tanpa nama cuti

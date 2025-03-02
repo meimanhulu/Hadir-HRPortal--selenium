@@ -19,7 +19,7 @@ import io.cucumber.java.en.When;
 public class ManajemenAturanCutiDefinition {
     private ManajemenAturanCutiScreen ManajemenAturanCutiScreen;
 
-    @Before
+    @Before("@ManagementAturanCuti")
     public void setup() {
         ManajemenAturanCutiScreen = new ManajemenAturanCutiScreen();
         UrlHelper.goToManajemenManagementUnitLeaveUrl();

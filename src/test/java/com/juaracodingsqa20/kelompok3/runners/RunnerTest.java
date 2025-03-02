@@ -8,9 +8,9 @@ import io.cucumber.testng.CucumberOptions;
                 // "src/test/resources/features/LaporanKehadiran.feature",
                 // "src/test/resources/features/LaporanIzinTerlambat.feature",
                 // "src/test/resources/features/LaporanIzinPulangCepat.feature",
-                // "src/test/resources/features/LaporanCuti.feature",
+                "src/test/resources/features/LaporanCuti.feature",
                 // "src/test/resources/features/LaporanSemua.feature"
-                "src/test/resources/features/ManajemenAturanCuti.feature"
+                // "src/test/resources/features/ManajemenAturanCuti.feature"
 }, glue = {
 
                 "com.juaracodingsqa20.kelompok3.definitions",
