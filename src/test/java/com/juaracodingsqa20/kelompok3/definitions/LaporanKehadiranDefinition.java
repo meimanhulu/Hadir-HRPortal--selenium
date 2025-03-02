@@ -172,7 +172,7 @@ public class LaporanKehadiranDefinition {
         Assert.assertTrue(laporanKehadiranScreen.isDataShowed());
     }
 
-    @When("Saya Menekan Tombol Export Pertama di Laporan Kehadiran")
+    @When("Saya Menekan Tombol Export Laporan Kehadiran")
     public void pressExportButtonLaporanKehadiran() {
         laporanKehadiranScreen.pressFirstExportButton();
     }
@@ -183,18 +183,18 @@ public class LaporanKehadiranDefinition {
         Assert.assertTrue(laporanKehadiranScreen.isExportDialogClosed());
     }
 
-    @When("Saya Menekan Tombol Export Kedua di Laporan Kehadiran")
+    @When("Saya Mengkonfirmasi Export Laporan Kehadiran")
     public void pressSecondExportButtonLaporanKehadiran() {
         laporanKehadiranScreen.pressSecondExportButton();
     }
 
-    @Then("Aplikasi Menyelesaikan Proses Export Laporan Kehadiran")
+    @Then("Aplikasi Memproses Export Laporan Kehadiran")
     public void verifyExportProcessIsCompleted() {
         SleepHelper.SleepLong();
         Assert.assertTrue(laporanKehadiranScreen.isCorrectlyExported());
     }
 
-    @When("Saya Menekan Tombol Batal Export di Laporan Kehadiran")
+    @When("Saya Menekan Tombol Batal Laporan Kehadiran")
     public void pressCancelExportButtonLaporanKehadiran() {
         laporanKehadiranScreen.pressCancelExportButton();
     }
@@ -204,5 +204,6 @@ public class LaporanKehadiranDefinition {
         SleepHelper.SleepLong();
         Assert.assertTrue(laporanKehadiranScreen.isExportDialogClosed());
     }
+
 }
 

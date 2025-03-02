@@ -66,4 +66,4 @@ Feature: Laporan Kehadiran
   Scenario: Membatalkan Export Laporan Kehadiran 
     When Saya Menekan Tombol Export Laporan Kehadiran
     And Saya Menekan Tombol Batal Laporan Kehadiran
-    Then Aplikasi Membatalkan Proses Export Laporan Kehadiran
+    Then Aplikasi Menutup Dialog Export
