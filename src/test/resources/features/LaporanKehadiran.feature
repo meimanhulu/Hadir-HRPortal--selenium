@@ -1,3 +1,4 @@
+@LaporanKehadiran
 Feature: Laporan Kehadiran
 
   Scenario: Mencari Laporan Kehadiran Berdasarkan Nama Karyawan "ADITYA RIDWAN NUGRAHA"

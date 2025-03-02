@@ -1,3 +1,4 @@
+@LaporanCuti
 Feature: Laporan Cuti
 
   Scenario: Mencari Laporan Cuti Berdasarkan Nama Karyawan "ADITYA RIDWAN NUGRAHA"

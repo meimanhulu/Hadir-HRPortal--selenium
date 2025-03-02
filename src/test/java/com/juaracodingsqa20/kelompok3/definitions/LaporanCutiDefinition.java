@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 public class LaporanCutiDefinition {
     private LaporanCutiScreen laporanCutiScreen;
 
-    @Before
+    @Before("@LaporanCuti")
     public void setup() {
         laporanCutiScreen = new LaporanCutiScreen();
         UrlHelper.goToLaporanCutiUrl();
