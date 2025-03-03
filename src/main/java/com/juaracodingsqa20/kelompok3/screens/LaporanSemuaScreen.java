@@ -6,10 +6,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import com.juaracodingsqa20.kelompok3.drivers.utils.SleepHelper;
 import com.juaracodingsqa20.kelompok3.drivers.utils.UrlHelper;
+import com.juaracodingsqa20.kelompok3.drivers.DriverSingleton;
 import com.juaracodingsqa20.kelompok3.drivers.utils.DriverWaitHelper;
 import java.util.Date;
 import java.util.List;
@@ -24,6 +27,11 @@ public class LaporanSemuaScreen {
         private final By DEPARTMENT_INPUT_FIELD = By.xpath("//*[@id=\"job_departement\"]");
         private final By FIRST_DEPARTMENT_INPUT_OPTION = By.xpath("//*[@id=\"job_departement-option-0\"]");
         private final By FILTER_SAVE_BUTTON = By.xpath("/html/body/div[3]/div[3]/div/form/div[2]/button[2]");
+        //// button[text()='Terapkan']
+        private final By Implementation = By.xpath("//button[contains(text(), 'Terapkan')]");
+        
+
+
         private final By FILTER_DATE_BUTTON = By.xpath(
                         "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-kw2xn2']//div[1]//div[1]//div[1]//button[1]");
         private final By FILTER_START_YEAR_SELECT = By.xpath(
@@ -93,6 +101,21 @@ public class LaporanSemuaScreen {
                                 .until(ExpectedConditions.elementToBeClickable(FIRST_DEPARTMENT_INPUT_OPTION));
                 firstDepartementInputOptionElement.click();
         }
+        //input departemen negatif: DEPARTMENT_INPUT_FIELD
+        public void inputDepartmentNegatif(String department) {
+                WebElement filterButtonElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.elementToBeClickable(FILTER_BUTTON));
+                filterButtonElement.click();
+                WebElement departementInputFieldElement = DriverWaitHelper.DRIVER_WAIT
+                        .until(ExpectedConditions.elementToBeClickable(DEPARTMENT_INPUT_FIELD));
+                departementInputFieldElement.sendKeys(department);
+        }
+            
+
+
+
+        
+
 
         public void pressFilterSaveButton() {
                 WebElement filterSaveButtonElement = DriverWaitHelper.DRIVER_WAIT
@@ -422,6 +445,15 @@ public class LaporanSemuaScreen {
                         }
                 }
                 return true;
+        }
+
+        // Implementation
+        public void Implementation() {
+                WebElement ImplementationElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.presenceOfElementLocated(Implementation));
+
+                JavascriptExecutor js = (JavascriptExecutor) DriverSingleton.getDriver();
+                js.executeScript("arguments[0].click();", ImplementationElement);
         }
 
 }

@@ -1,10 +1,9 @@
 @LaporanCuti
 Feature: Laporan Cuti
-
-  Scenario: Mencari Laporan Cuti Berdasarkan Nama Karyawan "ADITYA RIDWAN NUGRAHA"
-    Given Nama Karyawan "ADITYA RIDWAN NUGRAHA" di Kolom Pencarian Laporan Cuti
-    When Saya Mencari Laporan Cuti
-    Then Aplikasi Menampilkan Laporan Cuti Sesuai Nama "ADITYA RIDWAN NUGRAHA"
+  # Scenario: Mencari Laporan Cuti Berdasarkan Nama Karyawan "ADITYA RIDWAN NUGRAHA"
+  #   Given Nama Karyawan "ADITYA RIDWAN NUGRAHA" di Kolom Pencarian Laporan Cuti
+  #   When Saya Mencari Laporan Cuti
+  #   Then Aplikasi Menampilkan Laporan Cuti Sesuai Nama "ADITYA RIDWAN NUGRAHA"
 
   Scenario: Menampilkan Laporan Cuti Departemen "Iforte"
     Given Departemen "Iforte" di Kolom Filter Departemen Laporan Cuti

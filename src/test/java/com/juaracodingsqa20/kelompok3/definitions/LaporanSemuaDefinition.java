@@ -124,10 +124,14 @@ public class LaporanSemuaDefinition {
     public void setInputDepartmentLaporanSemua(String department) {
         laporanSemuaScreen.inputDepartment(department);
     }
-
+    //inputDepartmentNegatif
+    @Given("Departemen {string} di Kolom Filter Departemen Negatif Laporan Semua")
+    public void setInputDepartmentNegatifLaporanSemua(String department) {
+        laporanSemuaScreen.inputDepartmentNegatif(department);
+    }
     @When("Saya Memfilter Departemen Laporan Semua")
     public void executeDepartmentFilterLaporanSemua() {
-        laporanSemuaScreen.pressFilterSaveButton();
+        laporanSemuaScreen.Implementation();
     }
 
     @Then("Aplikasi Menampilkan Laporan Semua Sesuai Departemen {string}")
