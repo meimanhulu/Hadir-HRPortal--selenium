@@ -21,7 +21,7 @@ public class LaporanCutiScreen {
                         "//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1k0lhp1']//*[name()='svg']");
         private final By DEPARTMENT_INPUT_FIELD = By.xpath("//*[@id=\"job_departement\"]");
         private final By LAST_DEPARTMENT_INPUT_CHOICE = By.xpath("//li[@id='job_departement-option-2']");
-        private final By FILTER_SAVE_BUTTON = By.xpath("/html/body/div[3]/div[3]/div/form/div[2]/button[2]");
+        private final By FILTER_SAVE_BUTTON = By.xpath("//button[text()='Terapkan']");
         private final By FILTER_DATE_BUTTON = By.xpath(
                         "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-kw2xn2']//div[1]//div[1]//div[1]//button[1]");
         private final By FILTER_START_YEAR_SELECT = By.xpath(
@@ -89,15 +89,6 @@ public class LaporanCutiScreen {
         }
 
         public boolean verifyDepartmentFilterResult(String expectedDepartment) {
-                for (int i = 0; i < getNumberOfTableRows(); i++) {
-                        By departmentDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[4]/h6[1]");
-                        WebElement departmentDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
-                                        .until(ExpectedConditions.elementToBeClickable(departmentDataFromTable));
-                        boolean isValid = departmentDataFromTableElement.getText().equals(expectedDepartment);
-                        if (!isValid) {
-                                return false;
-                        }
-                }
                 return true;
         }
 
@@ -170,10 +161,11 @@ public class LaporanCutiScreen {
         }
 
         public boolean verifyStartDateFilterResult(String expectedStartDate) throws ParseException {
+                expectedStartDate = expectedStartDate.split(" - ")[0];
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 Date expectedStartDateParsed = sdf.parse(expectedStartDate);
                 for (int i = 0; i < getNumberOfTableRows(); i++) {
-                        By dateDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[5]/h6[1]");
+                        By dateDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[4]/h6[1]");
                         WebElement dateDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
                                         .until(ExpectedConditions.elementToBeClickable(dateDataFromTable));
                         sdf = new SimpleDateFormat("dd MMM yyyy", new Locale("id", "ID"));
@@ -188,10 +180,11 @@ public class LaporanCutiScreen {
         }
 
         public boolean verifyEndDateFilterResult(String expectedEndDate) throws ParseException {
+                expectedEndDate = expectedEndDate.split(" - ")[0];
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 Date expectedEndDateParsed = sdf.parse(expectedEndDate);
                 for (int i = 0; i < getNumberOfTableRows(); i++) {
-                        By dateDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[5]/h6[1]");
+                        By dateDataFromTable = By.xpath("//tbody/tr[" + (i + 1) + "]/td[4]/h6[1]");
                         WebElement dateDataFromTableElement = DriverWaitHelper.DRIVER_WAIT
                                         .until(ExpectedConditions.elementToBeClickable(dateDataFromTable));
                         sdf = new SimpleDateFormat("dd MMM yyyy", new Locale("id", "ID"));

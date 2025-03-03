@@ -11,11 +11,11 @@ Feature: Laporan Cuti
     When Saya Memfilter Departemen Laporan Cuti
     Then Aplikasi Menampilkan Laporan Cuti Sesuai Departemen "Iforte"
 
-  Scenario: Menampilkan Laporan Cuti dari Tanggal 10/01/2021 sampai 20/02/2025
-    Given Tanggal Mulai "10/01/2021" di Kolom Filter Tanggal Laporan Cuti
+  Scenario: Menampilkan Laporan Cuti dari Tanggal 10/01/2025 sampai 20/02/2025
+    Given Tanggal Mulai "10/01/2025" di Kolom Filter Tanggal Laporan Cuti
     And Tanggal Selesai "20/02/2025" di Kolom Filter Tanggal Laporan Cuti
     When Saya Memfilter Tanggal Laporan Cuti
-    Then Aplikasi Menampilkan Laporan Cuti dari Tanggal "10/01/2021"
+    Then Aplikasi Menampilkan Laporan Cuti dari Tanggal "10/01/2025"
     And Aplikasi Menampilkan Laporan Cuti Sampai Tanggal "20/02/2025"
 
   Scenario: Menghilangkan Parameter-parameter Filter Laporan Cuti yang Dibuat
@@ -23,13 +23,13 @@ Feature: Laporan Cuti
     And Saya Mencari Laporan Cuti
     And Departemen "Iforte" di Kolom Filter Departemen Laporan Cuti
     And Saya Memfilter Departemen Laporan Cuti
-    And Tanggal Mulai "10/01/2021" di Kolom Filter Tanggal Laporan Cuti
+    And Tanggal Mulai "10/01/2025" di Kolom Filter Tanggal Laporan Cuti
     And Tanggal Selesai "20/02/2025" di Kolom Filter Tanggal Laporan Cuti
     And Saya Memfilter Tanggal Laporan Cuti
     When Saya Menekan Tombol Reset di Laporan Cuti
     Then Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Nama "ADITYA RIDWAN NUGRAHA"
     And Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Departemen "Iforte"
-    And Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Tanggal Mulai "10/01/2021"
+    And Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Tanggal Mulai "10/01/2025"
     And Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Tanggal Selesai Sampai "20/02/2025"
 
   Scenario: Menampilkan 25 Laporan Cuti

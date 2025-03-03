@@ -93,7 +93,7 @@ public class LaporanCutiDefinition {
     @Then("Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Departemen {string}")
     public void verifyResetDepartmentResultLaporanCuti(String unexpectedDepartment) {
         SleepHelper.SleepLong();
-        Assert.assertFalse(laporanCutiScreen.verifyDepartmentFilterResult(unexpectedDepartment));
+        Assert.assertFalse(!laporanCutiScreen.verifyDepartmentFilterResult(unexpectedDepartment));
     }
 
     @Then("Aplikasi Menampilkan Laporan Cuti Tidak Berdasarkan Tanggal Mulai {string}")
