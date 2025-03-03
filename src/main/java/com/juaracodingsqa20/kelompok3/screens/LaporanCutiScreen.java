@@ -22,7 +22,7 @@ public class LaporanCutiScreen {
         private final By FILTER_BUTTON = By.xpath(
                         "//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1k0lhp1']//*[name()='svg']");
         private final By DEPARTMENT_INPUT_FIELD = By.xpath("//*[@id=\"job_departement\"]");
-        private final By FIRST_DEPARTMENT_INPUT_CHOICE = By.xpath("//*[@id=\"job_departement-option-0\"]");
+        private final By LAST_DEPARTMENT_INPUT_CHOICE = By.xpath("//li[@id='job_departement-option-2']");
         private final By FILTER_SAVE_BUTTON = By.xpath("/html/body/div[3]/div[3]/div/form/div[2]/button[2]");
         private final By FILTER_DATE_BUTTON = By.xpath(
                         "//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-kw2xn2']//div[1]//div[1]//div[1]//button[1]");
@@ -81,7 +81,7 @@ public class LaporanCutiScreen {
                                 .until(ExpectedConditions.elementToBeClickable(DEPARTMENT_INPUT_FIELD));
                 departementInputFieldElement.sendKeys(department);
                 WebElement firstDepartementInputChoiceElement = DriverWaitHelper.DRIVER_WAIT
-                                .until(ExpectedConditions.elementToBeClickable(FIRST_DEPARTMENT_INPUT_CHOICE));
+                                .until(ExpectedConditions.elementToBeClickable(LAST_DEPARTMENT_INPUT_CHOICE));
                 firstDepartementInputChoiceElement.click();
         }
         public void inputDepartmentNoChoise(String department) {
