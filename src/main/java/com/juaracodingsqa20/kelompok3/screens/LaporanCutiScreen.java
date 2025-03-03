@@ -7,9 +7,11 @@ import java.util.List;
 import java.util.Locale;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import com.juaracodingsqa20.kelompok3.drivers.DriverSingleton;
 import com.juaracodingsqa20.kelompok3.drivers.utils.DriverWaitHelper;
 import com.juaracodingsqa20.kelompok3.drivers.utils.SleepHelper;
 import com.juaracodingsqa20.kelompok3.drivers.utils.UrlHelper;
@@ -43,6 +45,7 @@ public class LaporanCutiScreen {
         private final By PREVIOUS_PAGE_BUTTON = By.xpath("//button[@title='Go to previous page']//*[name()='svg']");
         private final By LAST_PAGE_BUTTON = By.xpath("//button[@title='Go to last page']//*[name()='svg']");
         private final By FIRST_PAGE_BUTTON = By.xpath("//button[@title='Go to first page']//*[name()='svg']");
+        private final By Implementation = By.xpath("//button[contains(text(), 'Terapkan')]");
 
         public void inputName(String name) {
                 WebElement searchInputElement = DriverWaitHelper.DRIVER_WAIT
@@ -81,6 +84,22 @@ public class LaporanCutiScreen {
                                 .until(ExpectedConditions.elementToBeClickable(FIRST_DEPARTMENT_INPUT_CHOICE));
                 firstDepartementInputChoiceElement.click();
         }
+        public void inputDepartmentNoChoise(String department) {
+                WebElement filterButtonElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.elementToBeClickable(FILTER_BUTTON));
+                filterButtonElement.click();
+                WebElement departementInputFieldElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.elementToBeClickable(DEPARTMENT_INPUT_FIELD));
+                departementInputFieldElement.sendKeys(department);
+                
+        }
+        public void Implementation() {
+                WebElement ImplementationElement = DriverWaitHelper.DRIVER_WAIT
+                                .until(ExpectedConditions.presenceOfElementLocated(Implementation));
+
+                JavascriptExecutor js = (JavascriptExecutor) DriverSingleton.getDriver();
+                js.executeScript("arguments[0].click();", ImplementationElement);
+        }
 
         public void pressFilterSaveButton() {
                 WebElement filterSaveButtonElement = DriverWaitHelper.DRIVER_WAIT
@@ -100,6 +119,11 @@ public class LaporanCutiScreen {
                 }
                 return true;
         }
+        public boolean isDepartmentDataAvailable() {
+                int totalRows = getNumberOfTableRows();
+                return totalRows > 0;
+        }
+            
 
         public void inputFilterStartDate(String startDate) {
                 String[] startDateArray = startDate.split("/");

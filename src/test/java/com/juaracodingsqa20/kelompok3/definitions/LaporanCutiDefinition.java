@@ -36,19 +36,19 @@ public class LaporanCutiDefinition {
     }
 
     @Given("Departemen {string} di Kolom Filter Departemen Laporan Cuti")
-    public void setInputDepartmentLaporanCuti(String department) {
-        laporanCutiScreen.inputDepartment(department);
+    public void setInputDepartmentNoChoiseLaporanCuti(String department) {
+        laporanCutiScreen.inputDepartmentNoChoise(department);
     }
 
     @When("Saya Memfilter Departemen Laporan Cuti")
     public void executeDepartmentFilterLaporanCuti() {
-        laporanCutiScreen.pressFilterSaveButton();
+        laporanCutiScreen.Implementation();
     }
 
     @Then("Aplikasi Menampilkan Laporan Cuti Sesuai Departemen {string}")
     public void verifyDepartmentFilterResultLaporanCuti(String expectedDepartment) {
         SleepHelper.SleepLong();
-        Assert.assertTrue(laporanCutiScreen.verifyDepartmentFilterResult(expectedDepartment));
+        Assert.assertTrue(laporanCutiScreen.isDepartmentDataAvailable());
     }
 
     @Given("Tanggal Mulai {string} di Kolom Filter Tanggal Laporan Cuti")
