@@ -6,7 +6,7 @@ import com.juaracodingsqa20.kelompok3.drivers.DriverSingleton;
 
 public class UrlHelper {
     private static final WebDriver driver = DriverSingleton.getDriver();
-    private static final String BASE_URL = "https://magang.dikahadir.com/";
+    private static final String BASE_URL = "https://magang.dikahadir.com/authentication/login";
     private static final String LAPORAN_IZIN_TERLAMBAT_URL = BASE_URL + "laporan/izin-terlambat";
     private static final String ADMIN_LOGIN_URL = BASE_URL + "authentication/login";
     private static final String DASHBOARD_URL = BASE_URL + "dashboards/dashboard";
