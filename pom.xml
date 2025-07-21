@@ -12,9 +12,9 @@
 
   <properties>
     
-    <maven.compiler.source default-value="23">${env.javaVersion}</maven.compiler.source>
-    <maven.compiler.target default-value="23">${env.javaVersion}</maven.compiler.target>
-    <!-- mvn clean test -DtestBrowser=edge -DjavaVersion=17 -->
+    <maven.compiler.source default-value="24">${env.javaVersion}</maven.compiler.source>
+    <maven.compiler.target default-value="24">${env.javaVersion}</maven.compiler.target>
+    <!-- mvn clean test -DtestBrowser=edge -DjavaVersion=24 -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 

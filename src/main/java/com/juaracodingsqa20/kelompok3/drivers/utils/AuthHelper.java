@@ -14,10 +14,10 @@ public class AuthHelper {
         UrlHelper.goToAdminLoginUrl();
         WebElement emailInputFieldElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']")));
-        emailInputFieldElement.sendKeys("admin@hadir.com");
+        emailInputFieldElement.sendKeys("hadirsqa2@gmail.com");
         WebElement passwordInputFieldElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='password']")));
-        passwordInputFieldElement.sendKeys("admin@hadir");
+        passwordInputFieldElement.sendKeys("SQA@123pass");
         WebElement submitButtonElement = DriverWaitHelper.DRIVER_WAIT
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
         submitButtonElement.click();
